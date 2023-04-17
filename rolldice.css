@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    padding: 0;margin: 0;
+}
+.dice-roll{
+    height: 100vh;
+    width: 100vw;
+    background-color:#FFFFFF ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#rolldiceBtn{
+    height: 100px;
+    width: 220px;
+    color: rgb(131, 245, 0);
+    background-color: rgb(26, 90, 193);
+    font-size: larger;
+    font-weight: 500;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow:12px 12px  rgba(0, 13, 255, 0.2) ;
+}

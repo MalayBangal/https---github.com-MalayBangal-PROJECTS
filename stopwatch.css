@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.stopwatch-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(235, 133, 61);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    height: 50px;;
+    width: 100px;
+    margin-left: 5px;
+}
+#startbtn{
+    background-color: rgb(21, 35, 123);
+    border: 0px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: aliceblue;
+    font-size: large;
+}
+
+#stop{
+    background-color: rgb(204, 1, 123);
+    border: 0px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: aliceblue;
+    font-size: large;
+}
+
+#resetbtn{
+    background-color: rgb(193, 7, 7);
+    border: 0px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: aliceblue;
+    font-size: large;
+}
+
+.time-count{
+    font: size 100px;;
+    color: rgb(0, 0, 0);
+}
+#hour,#minut,#second,#milisecond{
+    font-size: 100px;
+    color: aliceblue;
+}
+#hr,#min,#sec{
+    color: aliceblue;
+    font-size: 50px;
+}
+#hour,#minut,#second,#milisecond{
+    font-size: 100px;
+}

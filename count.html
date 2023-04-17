@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="count.css">
+</head>
+<body>
+    <div class="count">
+        <div class="countnum">
+            <button id="sub">-</button>
+            <span id="counter">0</span>
+            <button id="add">+</button>
+        </div>
+        
+        
+        <div class="reset">
+            <button id="reset">reset</button>
+        </div>
+    </div>
+    <script>
+        let sbutraction = document.getElementById("sub");
+        let addition = document.getElementById("add");
+        let count = 0;
+        let counter = document.getElementById("counter");
+        let reset = document.getElementById("reset");
+
+        sbutraction.addEventListener("click", () => {
+    count--;
+    if(count>0){
+        counter.style.color ="green";
+    }else if(count<0){
+        counter.style.color ="red";
+    }
+    counter.innerText = count;
+});
+
+addition.addEventListener("click",()=>{
+    count++;
+    if(count>0){
+        counter.style.color ="green";
+    }else if(count<0){
+        counter.style.color ="red";
+    }
+    counter.innerText = count;
+})
+
+reset.addEventListener("click",()=>{
+    count = 0;
+    if(count==0){
+        counter.style.color ="white";
+    counter.innerText = count;}
+})
+
+
+    </script>
+</body>
+</html>

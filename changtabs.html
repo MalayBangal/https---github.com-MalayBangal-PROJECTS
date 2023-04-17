@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="changetab.css">
+</head>
+<body>
+    <div class="container">
+        <div class="img"></div>
+        <div class="content">
+            <div class="manue">
+                <div class="btnss">
+                    <button id="history">History</button>
+                <button id="vision">Vision</button>
+                <button id="goals">Goals</button>
+                </div>
+                <div class="contentss">
+                    <div class="history">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, alias inventore delectus saepe tempore, qui nesciunt dolore ullam quod error vero dicta. Quibusdam, cum vitae? Dolor itaque dicta explicabo amet, at recusandae dolorum sequi assumenda iusto ab laudantium libero est, consectetur cumque molestias deserunt enim! Sed, magnam, consequatur quo reiciendis labore accusantium unde ratione aperiam odio minus dolor error laborum vel amet quasi doloremque eum ex officiis ab? Ut fugit dolor, odio suscipit obcaecati sit hic corrupti exercitationem minima maiores asperiores dolorem aspernatur harum quis magni, iure at. Consequatur error itaque quam ex incidunt voluptatibus animi obcaecati suscipit recusandae quod.
+                    </div>
+                    <div class="vision">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam labore sunt illum, exercitationem veritatis voluptatem dolorem autem eius nemo ipsam quibusdam nisi quis. Nam quae dicta ipsam dolore labore sunt aspernatur atque, consequuntur quo vitae. Non mollitia, minus nisi magni quia quisquam. Repellat quia ipsa omnis atque, incidunt architecto quisquam unde, mollitia sunt distinctio vitae ipsam repellendus, minus adipisci rem?
+                    </div>
+                    <div class="goals">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vitae, laborum sunt distinctio quis dignissimos, dicta, earum provident optio ducimus expedita blanditiis assumenda! A id consequuntur pariatur cupiditate, tempore eligendi.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        let historydiv = document.querySelector(".history");
+        let visiondiv = document.querySelector(".vision");
+        let goalsdiv = document.querySelector(".goals");
+
+        let historyBtn = document.getElementById("history");
+        let visionBtn  = document.getElementById("vision");
+        let goalsBtn = document.getElementById("goals");
+        
+
+        visionBtn.addEventListener("click",()=>{
+            historydiv.style.display="none";
+            visiondiv.style.display = "inline";
+            goalsdiv.style.display = "none";
+        })
+
+        historyBtn.addEventListener("click",()=>{
+            historydiv.style.display="inline";
+            visiondiv.style.display = "none";
+            goalsdiv.style.display = "none";
+        })
+
+        goalsBtn.addEventListener("click",()=>{
+            historydiv.style.display="none";
+            visiondiv.style.display = "none";
+            goalsdiv.style.display = "inline";
+        })
+
+    </script>
+</body>
+</html>

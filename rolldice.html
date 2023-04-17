@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rolldice.css">
+</head>
+<body>
+    <div class="dice-roll">
+        <div class="img-dice">
+            <img class="imgdices" src="./dicenun.png"  alt="" style="height: 300px;">
+            
+        </div>
+        <button id="rolldiceBtn">Roll Dice</button>
+    </div>
+    <script>
+        let max = 6;
+        function getrandum(max){
+            return Math.floor(Math.random()*max)
+            +1;
+        }
+
+        let images = document.querySelector(".imgdices");
+        console.log(images);
+        let rollBtn = document.getElementById("rolldiceBtn");
+
+        rollBtn.addEventListener("click",()=>{
+            let randumnum = getrandum(6);
+            if (randumnum == 1) {
+                images.src ="./dice1.png";
+                
+            }
+            if (randumnum == 2) {
+                images.src ="./dice2.png";
+            }
+            if (randumnum == 3) {
+                images.src ="./dice3.png";
+            }
+            if (randumnum == 4) {
+                images.src ="./dice4.png";
+            }
+            if (randumnum == 5) {
+                images.src ="./dice5.png";
+            }
+            if (randumnum ==6) {
+                images.src ="./dice6.png";
+            
+            }
+        })
+        
+    </script>
+</body>
+</html>

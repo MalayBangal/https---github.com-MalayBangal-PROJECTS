@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stopwatch.css">
+</head>
+<body>
+    <div class="stopwatch-container">
+        <div class="time-count">
+            <span id="hour">00 </span><span id="hr">hr</span>
+            <span id="minut">00 </span><span id="min">min</span>
+            <span id="second">00 </span><span id="sec">sec</span>
+            <span id="milisecond">000</span>
+        </div>
+        <div class="btn">
+            <button id="startbtn">Start</button>
+            <button id="stop">stop</button>
+            <button id="resetbtn">Reset</button>
+        </div>
+    </div>
+    <script>
+        let hr = 0;
+        let mn = 0;
+        let sec = 0;
+        let milis = 0;
+        let hou = "00";
+        let mili = "000";
+
+        let iscount = false;
+
+        let dishour = document.getElementById("hour");
+        let dismin = document.getElementById("minut");
+        let dissec = document.getElementById("second");
+        let dismili = document.getElementById("milisecond");
+
+        let startBtn = document.getElementById("startbtn");
+        let stopBtn = document.getElementById("stop");
+        let resetBtn = document.getElementById("resetbtn");
+
+        startBtn.addEventListener("click",(e)=>{
+            startBtn.disabled = true;
+            iscount = true;
+            countbegin();
+
+        });
+        stopBtn.addEventListener("click",()=>{
+            startBtn.disabled = false;
+            iscount = false;
+
+        });
+        resetBtn.addEventListener("click",()=>{
+            startBtn.disabled = false;
+            iscount = false;
+            hr = 0;
+            mn = 0;
+            sec = 0;
+            milis = 0;
+            dishour.innerText = hou;
+            dismin.innerText = hou;
+            dissec.innerText = hou;
+            dismili.innerText = mili;
+
+        });
+
+         function countbegin (){
+            
+            if(iscount==true){
+                milis= milis+1;
+                if(milis==100){
+                    sec++;
+                    milis=0;
+                }
+                if(sec==60){
+                    mn++;
+                    sec=0;
+                    milis=0;
+                }
+                if(mn==60){
+                    hr++;
+                    mn=0;
+                    sec=0;
+                    milis=0;
+                }
+                dishour.innerText = hr;
+                dismin.innerText = mn;
+                dissec.innerText = sec;
+                dismili.innerText = milis;
+                setTimeout("countbegin()",10);
+                
+            }
+            
+        }
+
+
+    </script>
+</body>
+</html>

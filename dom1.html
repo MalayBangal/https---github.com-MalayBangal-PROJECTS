@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dom1.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Guntur&family=Hind+Madurai:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="calculator-container">
+        
+        <div class="calculator-sub">
+            
+            <input type="text">
+            <div class="operetor-operend"><button>7</button></div>
+            <div class="operetor-operend"><button>8</button></div>
+            <div class="operetor-operend"><button>9</button></div>
+            <div class="operetor-operend"><button style="background-color:#2ac8be ;">/</button></div>
+            <div class="operetor-operend"><button>4</button></div>
+            <div class="operetor-operend"><button>5</button></div>
+            <div class="operetor-operend"><button>6</button></div>
+            <div class="operetor-operend"><button style="background-color:#2ac8be ;">*</button></div>
+            <div class="operetor-operend"><button>1</button></div>
+            <div class="operetor-operend"><button>2</button></div>
+            <div class="operetor-operend"><button>3</button></div>
+            <div class="operetor-operend"><button style="background-color:#2ac8be ;">-</button></div>
+            <div class="operetor-operend"><button>0</button></div>
+            <div class="operetor-operend"><button>.</button></div>
+            <div class="operetor-operend"><button >00</button></div>
+            <div class="operetor-operend"><button style="background-color:#2ac8be ;">+</button></div>
+            <div id="clearbtn" class="operetor-operend"><button style="background-color:#d22839;">C</button ></div>
+            <div id="equal" class="operetor-operend"><button style="background-color:#2ac8be ;">=</button ></div>
+        </div>
+    </div>
+    <script>
+const input = document.querySelector('input');
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.innerHTML === '=') {
+      input.value = eval(input.value);
+    } else if (button.innerHTML === 'C') {
+      input.value = '';
+    } else {
+      input.value += button.innerHTML;
+    }
+  });
+});
+
+    </script>
+</body>
+</html>
