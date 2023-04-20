@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Todo App</title>
+	<link rel="stylesheet" href="todolist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body><div class="container">
+    <h1>Todo App</h1>
+	<form>
+		<input type="text" placeholder="Enter a new todo...">
+		<button type="submit" class="addd">Add</button>
+	</form>
+	<ul>
+		<li>
+			<input type="checkbox">
+			<span>Example todo item</span>
+			<button>Delete</button>
+		</li>
+	</ul>
+</div>
+	
+    <script>
+        // select elements from the HTML
+let form = document.querySelector('form');
+let input = document.querySelector('input[type="text"]');
+let list = document.querySelector('ul');
+
+// function to add a new todo
+function addTodo() {
+  // create a new todo item
+  let todoItem = document.createElement('li');
+  let checkbox = document.createElement('input');
+  let todoText = document.createElement('span');
+  let deleteBtn = document.createElement('button');
+  checkbox.type = 'checkbox';
+  todoText.textContent = input.value;
+  deleteBtn.textContent = 'Delete';
+  todoItem.appendChild(checkbox);
+  todoItem.appendChild(todoText);
+  todoItem.appendChild(deleteBtn);
+  list.appendChild(todoItem);
+  // reset the input field
+  input.value = '';
+}
+
+// function to remove a todo
+function removeTodo() {
+  let listItem = this.parentNode;
+  list.removeChild(listItem);
+}
+
+// add event listeners
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  if (input.value) {
+    addTodo();
+  }
+});
+
+list.addEventListener('click', function(event) {
+  if (event.target.tagName === 'BUTTON') {
+    removeTodo.call(event.target);
+  }
+});
+
+    </script>
+
+</body>
+</html>
