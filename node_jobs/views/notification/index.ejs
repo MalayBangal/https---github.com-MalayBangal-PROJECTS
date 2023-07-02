@@ -1,0 +1,10 @@
+<%- include('../partials/header') %>
+<h1>Index page for all notifications</h1>
+<% for (let notif of allNotifs) { %>
+    <div><%= notif.title %> - <a href="/notifications/<%= notif._id %>/edit" class="btn btn-outline-primary me-3">Edit</a></div>
+    <div><form action="/notifications/<%= notif._id %>?_method=delete" method="post">
+    <input type="submit" class="btn btn-outline-danger me-3" value="Delete">
+    </form></div>
+    <hr>
+<% } %>
+<%- include('../partials/footer') %>
